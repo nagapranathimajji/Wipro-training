@@ -25,8 +25,14 @@ from datetime import timedelta
 print("timedelta tommorow:",now + timedelta(days=1))  # Current date and time plus one day
 print("timedelta yesterday:",now - timedelta(days=1)) 
 print("timedelta future time after 3 and half hours:",now + timedelta(hours=3, minutes=30))  # Current date and time plus 3.5 hours
+ftime=now + timedelta(hours=3, minutes=30)
 #date.today()
 from datetime import date
 #date.today() returns the current local date.
 print("current local date:",date.today())
+
+#12hour and 24 hour format
+#strftime() formats a datetime object as a string.
+print("12 hour format:",ftime.strftime("%I:%M %p"))  # 12-hour format with AM/PM
+print("24 hour format:",ftime.strftime("%H:%M %p"))  # 24-hour format
 
